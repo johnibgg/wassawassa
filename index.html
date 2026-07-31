@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wassa-Wassa Attirant — Mode de préparation</title>
+<meta name="description" content="Comment préparer le Wassa-Wassa Attirant : laver, tremper 5 min, égrainer, cuire 10 min à la vapeur, saler et servir.">
+<link rel="icon" href="favicon.png">
+<style>
+  :root{
+    --bordeaux:#5E1A12; --bordeaux-f:#300E0A; --or:#F2B705;
+    --creme:#FDF6EC; --creme2:#F5E8D6; --ardoise:#6E5C52;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+    background:var(--creme); color:#2A1610; line-height:1.6;
+  }
+  header{
+    background:var(--bordeaux); color:var(--creme);
+    padding:32px 20px 28px; text-align:center;
+  }
+  header h1{font-size:clamp(28px,7vw,42px);letter-spacing:.5px;font-weight:800}
+  header h1 span{color:var(--or)}
+  header p{opacity:.9;margin-top:8px;font-size:15px}
+  .trait{width:120px;height:3px;background:var(--or);margin:16px auto 0;border-radius:2px}
+
+  main{max-width:720px;margin:0 auto;padding:24px 16px 48px}
+
+  .video{
+    background:#000;border-radius:18px;overflow:hidden;
+    margin-bottom:14px;box-shadow:0 8px 24px rgba(48,14,10,.18);
+  }
+  .video video{width:100%;display:block}
+  .legende{
+    text-align:center;font-size:14px;color:var(--ardoise);
+    margin:-4px 0 30px;
+  }
+
+  h2{
+    font-size:22px;margin:34px 0 4px;color:var(--bordeaux);
+    display:flex;align-items:center;gap:10px;
+  }
+  h2::before{content:'';width:8px;height:22px;background:var(--or);border-radius:4px}
+
+  ol{list-style:none;counter-reset:etape;margin-top:16px}
+  ol li{
+    counter-increment:etape;background:#fff;border-radius:14px;
+    padding:16px 16px 16px 64px;margin-bottom:10px;position:relative;
+    box-shadow:0 2px 8px rgba(48,14,10,.06);
+  }
+  ol li::before{
+    content:counter(etape);position:absolute;left:16px;top:14px;
+    width:34px;height:34px;background:var(--or);color:var(--bordeaux-f);
+    border-radius:50%;display:grid;place-items:center;
+    font-weight:800;font-size:17px;
+  }
+  ol li b{display:block;color:var(--bordeaux);margin-bottom:2px}
+  .duree{
+    display:inline-block;background:var(--creme2);color:var(--bordeaux);
+    padding:2px 10px;border-radius:20px;font-size:13px;font-weight:700;
+    margin-top:6px;
+  }
+
+  .choix{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .choix span{
+    background:#fff;border:1px solid var(--creme2);border-radius:20px;
+    padding:7px 14px;font-size:14px;
+  }
+
+  .commande{
+    background:var(--bordeaux);color:var(--creme);border-radius:18px;
+    padding:26px 20px;text-align:center;margin-top:38px;
+  }
+  .commande p{font-size:14px;opacity:.85}
+  .tel{
+    display:inline-block;margin-top:12px;background:var(--or);
+    color:var(--bordeaux-f);font-size:clamp(24px,6vw,32px);font-weight:800;
+    padding:14px 26px;border-radius:14px;text-decoration:none;
+    letter-spacing:1px;
+  }
+  .wa{
+    display:inline-block;margin-top:12px;color:var(--or);
+    text-decoration:none;font-weight:600;border-bottom:1px solid var(--or);
+  }
+  footer{text-align:center;padding:24px 16px 40px;font-size:13px;color:var(--ardoise)}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>WASSA<span>WASSA</span> ATTIRANT</h1>
+  <p>La saveur authentique de l'igname · 100 % traditionnel</p>
+  <div class="trait"></div>
+</header>
+
+<main>
+  <div class="video">
+    <video controls playsinline preload="metadata"
+           poster="apercu-animation.jpg">
+      <source src="wassa-wassa-preparation.mp4" type="video/mp4">
+    </video>
+  </div>
+  <p class="legende">Le mode de préparation, expliqué pas à pas</p>
+
+  <div class="video">
+    <video controls playsinline preload="metadata" poster="apercu-recette.jpg">
+      <source src="wassa-wassa-recette.mp4" type="video/mp4">
+    </video>
+  </div>
+  <p class="legende">La préparation en vrai, chez nous</p>
+
+  <h2>Mode de cuisson</h2>
+  <ol>
+    <li><b>Laver</b>Rincez le wassa-wassa 2 à 3 fois à l'eau claire.</li>
+    <li><b>Tremper</b>Versez de l'eau chaude dessus, couvrez et fermez.
+      <span class="duree">5 minutes</span></li>
+    <li><b>Cuire à la vapeur</b>Récupérez le wassa-wassa trempé et mettez-le
+      dans votre couscoussier.<span class="duree">10 minutes</span></li>
+    <li><b>Saler et servir</b>Videz dans un saladier, salez, puis servez avec
+      l'accompagnement de votre choix.</li>
+  </ol>
+
+  <h2>Avec quoi le manger ?</h2>
+  <div class="choix">
+    <span>🐟 Poisson frit ou braisé</span>
+    <span>🧀 Wagashi grillé</span>
+    <span>🍅 Sauce tomate pimentée</span>
+    <span>🫘 Haricots</span>
+    <span>🥜 Sauce d'arachide</span>
+    <span>🍤 Friture et salade</span>
+  </div>
+  <p class="legende" style="margin-top:14px;text-align:left">
+    Beaucoup arrosent aussi d'un filet d'huile d'arachide, avec du piment
+    en poudre et de l'oignon émincé. Il n'y a pas une seule bonne façon.
+  </p>
+
+  <div class="commande">
+    <p>Pour vos commandes</p>
+    <a class="tel" href="tel:+22940422937">01 40 42 29 37</a>
+    <br>
+    <a class="wa" href="https://wa.me/22940422937?text=Bonjour%2C%20je%20souhaite%20commander%20du%20Wassa-Wassa%20Attirant.">
+      Écrire sur WhatsApp
+    </a>
+  </div>
+</main>
+
+<footer>
+  Wassa-Wassa Attirant — Spécialité traditionnelle, fait maison · Bénin 🇧🇯
+</footer>
+
+</body>
+</html>
