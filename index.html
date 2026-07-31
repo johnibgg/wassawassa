@@ -34,8 +34,20 @@
   .video video{width:100%;display:block}
   .legende{
     text-align:center;font-size:14px;color:var(--ardoise);
-    margin:-4px 0 30px;
+    margin:-4px 0 24px;
   }
+  .son{
+    display:block;margin:0 auto 10px;background:var(--or);border:0;
+    color:var(--bordeaux-f);font-weight:700;font-size:15px;
+    padding:11px 22px;border-radius:24px;cursor:pointer;
+    font-family:inherit;
+  }
+  .son.cache{display:none}
+  details{
+    background:#fff;border-radius:14px;padding:14px 16px;
+    margin-bottom:8px;box-shadow:0 2px 8px rgba(48,14,10,.06);
+  }
+  summary{cursor:pointer;font-weight:600;color:var(--bordeaux)}
 
   h2{
     font-size:22px;margin:34px 0 4px;color:var(--bordeaux);
@@ -95,20 +107,26 @@
 </header>
 
 <main>
+  <!-- La vidéo animée est la destination du QR : elle démarre seule,
+       en sourdine, pour que le client voie immédiatement quelque chose.
+       Un bandeau l'invite à activer le son. -->
   <div class="video">
-    <video controls playsinline preload="metadata"
+    <video id="film" controls autoplay muted playsinline preload="auto"
            poster="apercu-animation.jpg">
       <source src="wassa-wassa-preparation.mp4" type="video/mp4">
     </video>
   </div>
+  <button id="son" class="son">🔊 Activer le son</button>
   <p class="legende">Le mode de préparation, expliqué pas à pas</p>
 
-  <div class="video">
-    <video controls playsinline preload="metadata" poster="apercu-recette.jpg">
-      <source src="wassa-wassa-recette.mp4" type="video/mp4">
-    </video>
-  </div>
-  <p class="legende">La préparation en vrai, chez nous</p>
+  <details>
+    <summary>Voir aussi : la préparation en vrai, chez nous</summary>
+    <div class="video" style="margin-top:14px">
+      <video controls playsinline preload="none" poster="apercu-recette.jpg">
+        <source src="wassa-wassa-recette.mp4" type="video/mp4">
+      </video>
+    </div>
+  </details>
 
   <h2>Mode de cuisson</h2>
   <ol>
@@ -148,6 +166,22 @@
 <footer>
   Wassa-Wassa Attirant — Spécialité traditionnelle, fait maison · Bénin 🇧🇯
 </footer>
+
+<script>
+  // Les navigateurs mobiles n'autorisent la lecture automatique qu'en
+  // sourdine : on propose donc un bouton pour rétablir le son, qui
+  // disparaît dès qu'on l'a utilisé.
+  const film = document.getElementById('film');
+  const bouton = document.getElementById('son');
+  bouton.addEventListener('click', () => {
+    film.muted = false;
+    film.play();
+    bouton.classList.add('cache');
+  });
+  film.addEventListener('volumechange', () => {
+    if (!film.muted) bouton.classList.add('cache');
+  });
+</script>
 
 </body>
 </html>
